@@ -3,6 +3,7 @@ import time
 from pathlib import Path
 
 import tkinter as tk
+from datetime import datetime
 from tkinter import messagebox, ttk
 import sys,os
 sys.path.append(os.getcwd())
@@ -297,3 +298,6 @@ class UIHandler:
                            f.write("</html>\n")     
         else:
             print ('This is not yet developed')
+        messagebox.showinfo('Info', "Data is reported to " + str(report_path))
+
+

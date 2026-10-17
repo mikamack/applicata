@@ -11,6 +11,7 @@ sys.path.append(os.getcwd())
 import handlers
 
 from handlers import UIHandler
+from exporters import Exporter
 
 
 class UIRender:
@@ -108,9 +109,10 @@ class UIRender:
        button_edit.place(x=300,y=480)
        button_delete=tk.Button(dialog, text='Delete', command = lambda: h.delete_button(self.table_list))
        button_delete.place(x=360,y=480)
-       button_delete=tk.Button(dialog, text='Send to print', command = lambda: self.render_print_data())
-       button_delete.place(x=440,y=480)
-
+       button_print=tk.Button(dialog, text='Send to print', command = lambda: self.render_print_data())
+       button_print.place(x=440,y=480)
+       button_export=tk.Button(dialog, text='Export to table', command = lambda: self.render_export_data())
+       button_export.place(x=560,y=480)
        table_list_columns=("Id","","Field","Field 2","Field3","Field4","Field5","Field6","Field7","Field8")
        self.table_list=ttk.Treeview(dialog, columns=table_list_columns, padding=(0,0,15,15), selectmode = 'browse', show="headings")
        j=0
@@ -333,19 +335,26 @@ class UIRender:
             continue    
 
     def render_print_data(self):
+
       if (self.table_list.selection() == ()):
          messagebox.showerror('Error','None selected. Make a search first')
          return 0
-      
-            
       try:
          stream = open('yaml/gui.yaml', 'r')
          yaml.safe_load(stream)
       except OSError:
          messagebox.showerror('Error','Something wrong with file yaml')
-      
       row_index=self.table_list.selection()
-      
       doc_id = self.table_list.item(row_index)['values'][0]
       h = UIHandler()
       h.print_button(doc_id)        
+
+    def render_export_data(self):
+      doc_ids=['']
+      row_index=self.table_list.get_children()
+      for row in row_index:
+         tmp=self.table_list.item(row)['values'][0]
+         doc_ids.append(tmp) 
+      
+      he = Exporter()
+      he.export_button(doc_ids)
