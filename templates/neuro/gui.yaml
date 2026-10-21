@@ -1,0 +1,667 @@
+---
+type: Window
+width: 1900
+height: 1280
+label: "MainView"
+id: "id_MainView"
+content:
+  -
+    type: "Label"
+    id: "id_labelfio"
+    label: "Name:"
+    pos_x: 10
+    pos_y: 15
+  -
+    type: "Entry"
+    id: "id_fio"
+    label: "FIO"
+    pos_x: 60
+    pos_y: 15
+  -
+    type: "Label"
+    id: "id_labelbirthdate"
+    label: "Birthdate:"
+    pos_x: 240
+    pos_y: 15 
+  -
+    type: "TimeStamp"
+    id: "id_birthdate"
+    label: "Birthdate"
+    pos_x: 310
+    pos_y: 15
+  -
+    type: "Label"
+    id: "id_labeltoday"
+    label: "Today:"
+    pos_x: 475
+    pos_y: 15 
+  -
+    type: "TimeStamp"
+    id: "id_today"
+    label: "Today:"
+    pos_x: 520
+    pos_y: 15  
+
+  -
+    type: "Tab"
+    id: "id_tab1"
+    label: "Compliants"
+    pos_x: 45
+    pos_y: 50
+    width: 720
+    height: 450
+    content:
+     -
+      type: "Label"
+      id: "id_label1"
+      label: "Compliants:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext 1"
+      id: "id_text1"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+
+  -
+    type: "Tab"
+    id: "id_tab2"
+    label: "Anamnesis of sick"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label2"
+      label: "Anamnesis:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext 2"
+      id: "id_text2"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab3"
+    label: "Anamnesis of life"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label3"
+      label: "Anamnesis:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext 3"
+      id: "id_text3"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab5"
+    label: "St praesens"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "LabelFrame"
+      id: "id_labelfr5"
+      label: "Eye's pupils"
+      pos_x: 2
+      pos_y: 2
+      height: 300
+      width: 115
+     -
+      type: "Label"
+      id: "id_label5"
+      label: "Symmetry:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Combobox"
+      id: "id_cmbx5"
+      label: "Symmetry:"
+      pos_x: 10
+      pos_y: 50
+      values: ["D=S","D>S","D<S"]
+      height: 50
+      width: 10
+
+     -
+      type: "Label"
+      id: "id_label51"
+      label: "Photoreaction:"
+      pos_x: 10
+      pos_y: 90
+     -
+      type: "Combobox"
+      id: "id_cmbx51"
+      label: "Photoreaction:"
+      pos_x: 10
+      pos_y: 115
+      values: ["Direct","Indirect"]
+      height: 50
+      width: 10
+     -
+      type: "Label"
+      id: "id_label52"
+      label: "Type:"
+      pos_x: 10
+      pos_y: 135
+     -
+      type: "Combobox"
+      id: "id_cmbx52"
+      label: "Type:"
+      pos_x: 10
+      pos_y: 155
+      values: ["Brisk","Sluggish","Areflexia","Paradoxal"]
+      height: 50
+      width: 10
+     -
+      type: "LabelFrame"
+      id: "id_labelfr51"
+      label: "Face:"
+      pos_x: 120
+      pos_y: 2
+      height: 110
+      width: 110
+     -
+      type: "Label"
+      id: "id_label53"
+      label: "Symmetry:"
+      pos_x: 125
+      pos_y: 25
+     -
+      type: "Combobox"
+      id: "id_cmbx53"
+      label: "Face:"
+      pos_x: 125
+      pos_y: 50
+      values: ["D=S","D>S","D<S"]
+      height: 10
+      width: 10
+     -
+      type: "LabelFrame"
+      id: "id_labelfr54"
+      label: "Tongue pos:"
+      pos_x: 120
+      pos_y: 112
+      height: 100
+      width: 110
+     -
+      type: "Label"
+      id: "id_label54"
+      label: "Tongue:"
+      pos_x: 125
+      pos_y: 135
+     -
+      type: "Combobox"
+      id: "id_cmbx54"
+      label: "Tongue:"
+      pos_x: 125
+      pos_y: 155
+      values: ["Midline","Deviated","Tremor"]
+      height: 10
+      width: 10
+     -
+      type: "LabelFrame"
+      id: "id_labelfr54"
+      label: "DTR(tend):"
+      pos_x: 120
+      pos_y: 220
+      height: 110
+      width: 110
+
+     -
+      type: "Combobox"
+      id: "id_cmbx54"
+      label: "DTR:"
+      pos_x: 125
+      pos_y: 245
+      values: ["Brisk","Hyperactive","Hypoactive","Absent"]
+      height: 10
+      width: 10
+     -
+      type: "Label"
+      id: "id_label54"
+      label: "Symmetry:"
+      pos_x: 125
+      pos_y: 275
+     -
+      type: "Combobox"
+      id: "id_cmbx54"
+      label: "Symmetry:"
+      pos_x: 125
+      pos_y: 295
+      values: ["D=S","D>S","D<S"]
+      height: 10
+      width: 10          
+     -
+      type: "LabelFrame"
+      id: "id_labelfr54"
+      label: "DTR(perio):"
+      pos_x: 232
+      pos_y: 2
+      height: 110
+      width: 110
+
+     -
+      type: "Combobox"
+      id: "id_cmbx54"
+      label: "DTR:"
+      pos_x: 240
+      pos_y: 25
+      values: ["Brisk","Hyperactive","Hypoactive","Absent"]
+      height: 10
+      width: 10
+     -
+      type: "Label"
+      id: "id_label54"
+      label: "Symmetry:"
+      pos_x: 240
+      pos_y: 50
+     -
+      type: "Combobox"
+      id: "id_cmbx54"
+      label: "Symmetry:"
+      pos_x: 240
+      pos_y: 75
+      values: ["D=S","D>S","D<S"]
+      height: 10
+      width: 10  
+     -
+      type: "LabelFrame"
+      id: "id_labelfr55"
+      label: "FNP:"
+      pos_x: 345
+      pos_y: 2
+      height: 50
+      width: 110
+
+     -
+      type: "Combobox"
+      id: "id_cmbx55"
+      label: "FNP:"
+      pos_x: 350
+      pos_y: 25
+      values: ["Normal", "Tremor", "Dismetria"]
+      height: 10
+      width: 10
+     -
+      type: "LabelFrame"
+      id: "id_labelfr56"
+      label: "Romberg:"
+      pos_x: 345
+      pos_y: 52
+      height: 60
+      width: 110
+     -
+      type: "Combobox"
+      id: "id_cmbx56"
+      label: "Romberg:"
+      pos_x: 350
+      pos_y: 77
+      values: ["Normal", "Fault Left", "Fault right"]
+      height: 10
+      width: 10
+     -
+      type: "LabelFrame"
+      id: "id_labelfr57"
+      label: "Pathol signs"
+      pos_x: 235
+      pos_y: 113
+      height: 120
+      width: 350
+     -
+      type: "Label"
+      id: "id_labelbabinski"
+      label: "Babinski:"
+      pos_x: 245
+      pos_y: 135
+     -
+      type: "Checkbutton"
+      id: "id_babinsky"
+      label: "Babinski:"
+      pos_x: 315
+      pos_y: 135
+     -
+      type: "Label"
+      id: "id_label57"
+      label: "Oppenheim:"
+      pos_x: 240
+      pos_y: 155
+     -
+      type: "Checkbutton"
+      id: "id_openheim"
+      label: "Openheim:"
+      pos_x: 315
+      pos_y: 155
+     -
+      type: "Label"
+      id: "id_labelgordon"
+      label: "Gordon"
+      pos_x: 245
+      pos_y: 175
+     -
+      type: "Checkbutton"
+      id: "id_gordon"
+      label: "GOrdon:"
+      pos_x: 315
+      pos_y: 175
+     - 
+      type: "Label"
+      id: "id_labelscheffer"
+      label: "Scheffer:"
+      pos_x: 355
+      pos_y: 135
+     -
+      type: "Checkbutton"
+      id: "id_scheffer"
+      label: "Scheffer:"
+      pos_x: 425
+      pos_y: 135
+     - 
+      type: "Label"
+      id: "id_labelrosslolimo"
+      label: "Rossolimo:"
+      pos_x: 355
+      pos_y: 155
+     -
+      type: "Checkbutton"
+      id: "id_rossolimo"
+      label: "Rossolimo:"
+      pos_x: 425
+      pos_y: 155
+     - 
+      type: "Label"
+      id: "id_labelbehtmend"
+      label: "Beht/Mendel:"
+      pos_x: 355
+      pos_y: 175
+     -
+      type: "Checkbutton"
+      id: "id_behtmen"
+      label: "Beh-Mend:"
+      pos_x: 425
+      pos_y: 175
+
+     - 
+      type: "Label"
+      id: "id_labelzhukovsky"
+      label: "Zhukovsky:"
+      pos_x: 475
+      pos_y: 135
+     -
+      type: "Checkbutton"
+      id: "id_zhukovsky"
+      label: "Zhukovsky:"
+      pos_x: 550
+      pos_y: 135
+     - 
+      type: "Label"
+      id: "id_labelzhukovsky_f"
+      label: "Zhukovsky(f):"
+      pos_x: 460
+      pos_y: 135
+     -
+      type: "Checkbutton"
+      id: "id_zhukovsky_f"
+      label: "Zhukovsky(f):"
+      pos_x: 550
+      pos_y: 135
+     - 
+      type: "Label"
+      id: "id_labelzhukovsky_h"
+      label: "Zhukovsky(h):"
+      pos_x: 460
+      pos_y: 155
+     -
+      type: "Checkbutton"
+      id: "id_zhukovsky_h"
+      label: "Zhukovsky(h):"
+      pos_x: 550
+      pos_y: 155
+     - 
+      type: "Label"
+      id: "id_labelrosso_vand"
+      label: "Rosso-Vand:"
+      pos_x: 460
+      pos_y: 175
+     -
+      type: "Checkbutton"
+      id: "id_rosso_vand"
+      label: "Rosso/Vand:"
+      pos_x: 550
+      pos_y: 175
+     - 
+      type: "Label"
+      id: "id_labeltremner"
+      label: "Tremner:"
+      pos_x: 460
+      pos_y: 195
+     -
+      type: "Checkbutton"
+      id: "id_tremner"
+      label: "Tremner:"
+      pos_x: 550
+      pos_y: 195
+     - 
+      type: "Label"
+      id: "id_labelhoffman"
+      label: "Hoffman:"
+      pos_x: 355
+      pos_y: 195
+     -
+      type: "Checkbutton"
+      id: "id_hoffman"
+      label: "Hoffman:"
+      pos_x: 425
+      pos_y: 195
+
+
+     -
+      type: "LabelFrame"
+      id: "id_labelfr67"
+      label: "Pathol signs"
+      pos_x: 235
+      pos_y: 235
+      height: 120
+      width: 350
+     -
+      type: "Label"
+      id: "id_labelkernig"
+      label: "Kernig:"
+      pos_x: 245
+      pos_y: 255
+     -
+      type: "Checkbutton"
+      id: "id_kernig"
+      label: "Kernig:"
+      pos_x: 315
+      pos_y: 255
+     -
+      type: "Label"
+      id: "id_labelbrudzinsky"
+      label: "Brudzinsky:"
+      pos_x: 247
+      pos_y: 275
+     -
+      type: "Combobox"
+      id: "id_cmbx55"
+      label: "FNP:"
+      pos_x: 320
+      pos_y: 275
+      values: ["Upper", "Mid", "Bottom"]
+      height: 10
+      width: 10
+     -
+      type: "Label"
+      id: "id_labellesazh"
+      label: "Lesazh:"
+      pos_x: 245
+      pos_y: 295
+     -
+      type: "Checkbutton"
+      id: "id_lesazh"
+      label: "Lesazh:"
+      pos_x: 320
+      pos_y: 295
+     -
+      type: "Label"
+      id: "id_labelbekh"
+      label: "Bekhterev:"
+      pos_x: 445
+      pos_y: 255
+     -
+      type: "Checkbutton"
+      id: "id_bekhterev"
+      label: "Bekhterev:"
+      pos_x: 520
+      pos_y: 255
+
+     -
+      type: "Label"
+      id: "id_labelpoz"
+      label: "Pose:"
+      pos_x: 445
+      pos_y: 275
+     -
+      type: "Checkbutton"
+      id: "id_pose"
+      label: "Pose:"
+      pos_x: 520
+      pos_y: 275
+     -
+      type: "Label"
+      id: "id_labelmen"
+      label: "Mendel:"
+      pos_x: 445
+      pos_y: 295
+     -
+      type: "Checkbutton"
+      id: "id_mendel"
+      label: "Mendel:"
+      pos_x: 520
+      pos_y: 295
+
+     -
+      type: "Label"
+      id: "id_photophobia"
+      label: "Photophobia:"
+      pos_x: 245
+      pos_y: 315
+     -
+      type: "Checkbutton"
+      id: "id_photophobia"
+      label: "Photophobia:"
+      pos_x: 320
+      pos_y: 315
+     
+     -
+      type: "Label"
+      id: "id_phonophobia"
+      label: "Phonophobia:"
+      pos_x: 445
+      pos_y: 315
+     -
+      type: "Checkbutton"
+      id: "id_phonophobia"
+      label: "Phonophobia:"
+      pos_x: 520
+      pos_y: 315
+  -
+    type: "Tab"
+    id: "id_tab6"
+    label: "Exploreplan"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label6"
+      label: "Exploreplan:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext 6"
+      id: "id_text6"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab7"
+    label: "Diagnosis"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label7"
+      label: "Diagnosis:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext 7"
+      id: "id_text6"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab7"
+    label: "Diagnosis II"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label8"
+      label: "Diagnosis II:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Multitext II"
+      id: "id_text8"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab9"
+    label: "Cure"
+    pos_x: 130
+    pos_y: 50
+    content:
+     -
+      type: "Label"
+      id: "id_label9"
+      label: "Cure:"
+      pos_x: 10
+      pos_y: 25
+     -
+      type: "Text"
+      label: "Cure"
+      id: "id_text9"
+      pos_x: 10
+      pos_y: 60
+      height: 20
+      width: 70

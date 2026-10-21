@@ -1,0 +1,163 @@
+---
+type: Window
+width: 1900
+height: 1280
+label: "MainView"
+id: "id_MainView"
+content:
+  -
+    type: "Label"
+    id: "id_labeldemo"
+    label: "Demo of widgets:"
+    pos_x: 10
+    pos_y: 15
+  -
+    type: "Tab"
+    id: "id_tab1"
+    label: "Text entry"
+    pos_x: 45
+    pos_y: 50
+    width: 770
+    height: 450
+    content:
+     -
+       type: "Entry"
+       label: "Multitext 1"
+       id: "id_text1"
+       pos_x: 300
+       pos_y: 160
+       width: 20
+  -
+    type: "Tab"
+    id: "id_tab2"
+    label: "Text multiline"
+    content:
+     -
+      type: "Text"
+      label: "Multitext 2"
+      id: "id_text2"
+      pos_x: 100
+      pos_y: 60
+      height: 20
+      width: 70
+  -
+    type: "Tab"
+    id: "id_tab3"
+    label: "Listbox"
+    content:
+     -
+      type: "Listbox"
+      label: "Listbox"
+      id: "id_lbx3"
+      pos_x: 300
+      pos_y: 60
+      values: ['0','1','2']
+      width: 20
+      height: 10
+  -
+    type: "Tab"
+    id: "id_tab5"
+    label: "Combobox"
+    content: 
+     -
+      type: "Combobox"
+      id: "id_cmbx5"
+      label: "Symmetry:"
+      pos_x: 300
+      pos_y: 60
+      values: ["0","1","2"]
+      height: 50
+      width: 10
+
+  -
+    type: "Tab"
+    id: "id_tab6"
+    label: "Radiobutton"
+    content:
+     -
+      type: "Radiobutton"
+      id: "id_rb51"
+      label: "Sample 1"
+      pos_x: 300
+      pos_y: 60
+      value: 0
+      height: 50
+      width: 10
+     -
+      type: "Radiobutton"
+      id: "id_rb52"
+      label: "Sample 2"
+      pos_x: 300
+      pos_y: 60
+      value: 1
+      height: 50
+      width: 10
+  -
+    type: "Tab"
+    id: "id_tab7"
+    label: "Spinbox"
+    content:
+     -
+      type: "Spinbox"
+      id: "id_spn7"
+      label: "Spinbox"
+      pos_x: 300
+      pos_y: 60
+      from: 0
+      to: 1
+      increment: 0.1
+      width: 5
+  -
+    type: "Tab"
+    id: "id_tab7"
+    label: "Scale"
+    content:
+     -
+      type: "Scale"
+      id: "id_scale8"
+      label: "Scale:"
+      pos_x: 300
+      pos_y: 60
+      length: 150
+      from: 0
+      to: 1
+      resolution: 0.1
+      orient: horizontal
+
+  -
+    type: "Tab"
+    id: "id_tab9"
+    label: "Timestamp"
+    content:
+     -
+      type: "TimeStamp"
+      id: "id_tmstmp9"
+      label: "Timestamp"
+      pos_x: 300
+      pos_y: 60
+  -
+    type: "Tab"
+    id: "id_tab10"
+    label: "TableView"
+    content:
+     -
+      type: "TableView"
+      id: "id_tmstmp9"
+      label: "TableView"
+      pos_x: 300
+      pos_y: 60
+      width: 350
+      height: 100
+  -
+    type: "Tab"
+    id: "id_tab19"
+    label: "ImageGallery"
+    content:
+     -
+      type: "ImageGallery"
+      id: "id_ig1"
+      label: "ImageGallery"
+      width: 1920
+      height: 1080
+      pos_x: 395
+      pos_y: 105
