@@ -1,7 +1,7 @@
-# 🚀 SPADA: Software Platform for Aggregation of Data and Analysis
+# 🚀 Applicata: low code platform for developing CRUD apps. 
 
 <p align="center">
-  <strong>Low-code development platform designed for data aggregation, processing, and analysis preparation.</strong>
+  <strong>Low-code development platform designed for applications, that decides tasks of data aggregation, processing, and analysis preparation.</strong>
 </p>
 
 <p align="center">
@@ -12,9 +12,9 @@
 
 ---
 
-SPADA helps automate, streamline, and visualize info within educational, research, and startup projects. The platform is tailored for students, postgraduates, professionals, and domain researchers.
+<b>Applicata</b> helps automate, streamline, and visualize info within educational, research, and startup projects. The platform is tailored for students, postgraduates, professionals, domain researchers, and SMB users who wants to make fast decision to collect business data.
 
-To minimize the coding burden, SPADA requires no actual algorithmic or object-oriented programming. Instead, it provides a flexible environment focused on user interface and database design.
+To minimize the coding burden, Applicata requires no actual algorithmic or object-oriented programming. Instead, it provides a flexible environment focused on developing user interface and database design.
 
 > [!TIP]
 > <small>💡 **Want to start now?** Jump straight to our [Quickstart](#-quickstart) section. It contains a simplified guide to YAML syntax.</small>
@@ -38,14 +38,17 @@ To minimize the coding burden, SPADA requires no actual algorithmic or object-or
 
 * **📉 Low-Code Development**
   Features a low entry barrier. No prior coding experience is required — only a basic knowledge of YAML.
-* **🔌 Offline Readiness**
-  Runs fully locally with no internet access needed. Ideal for field engineers and secure environments.
+* **📉 Zero DB Development**
+  Full absence of need to project/code/draw the schema for backend db, it adapts automatically under your needs you written in YAML.
 * **⚙️ Zero Configuration**
   Uses pre-configured & hardcoded defaults to completely eliminate complex installation, setup, and startup issues.
 * **📄 YAML-Based**
   Avoids complex DSLs or traditional programming languages to ensure a blazing fast start.
+**🔌 Offline Readiness**
+  Runs fully locally with no internet access needed. Ideal for field engineers and secure environments.
 * **📋 Ready-to-Use Examples**
   Includes pre-made YAML templates to simplify your workflow right from the box.
+  ** 
 
 ---
 
@@ -57,16 +60,16 @@ To minimize the coding burden, SPADA requires no actual algorithmic or object-or
 
 ## 🚀 Quickstart
 
-Follow these 5 simple steps to get SPADA running locally:
+Follow these 5 simple steps to get Applicata running locally:
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/mikamack/spada.git
+git clone https://github.com/mikamack/applicata.git
 ```
 
 ### 2. Enter the project directory
 ```bash
-cd spada
+cd applicata
 ```
 
 ### 3. Install requirements
@@ -75,9 +78,10 @@ pip install -r requirements.txt
 ```
 
 ### 4. Configure your layout
-Open and edit the main configuration file in your favorite text editor:
+Open and edit the main functionality UI's (Add/Update) file and reporting's file in your favorite text editor:
 ```bash
 nano yaml/gui.yaml
+nano yaml/print.yaml
 ```
 
 ### 5. Launch the platform
@@ -92,9 +96,9 @@ python main.py
  After starting the application, it will show you dialog for register your user in a standard way(login,password,re-type password). During this step, application will create it's database (DataWallet), then it will store the credentials in there. All successive starts the application will use this as backend data storage (noSQL, JSON-like). 
 
 ---
-## YAML short reference (within SPADA's context)
+## YAML short reference (within Applicata's context)
 1. Your yaml-file should be started with '---'
-2. Keep the indentants correctly, i.e. 3 spaces for every newline.
+2. Keep the indentants correctly, i.e. 3 spaces for every newline for block (widget's params,for example).
 3. Start to explore and compose with blocks for creating widgets: 
 <details>
   <summary><b>🔹 "Window"</b></summary>
@@ -107,13 +111,15 @@ python main.py
   <br><b>pos_y:</b> Window's size by y-axis of your monitor, in dots
   <br><b>label:</b> Window's name, which is displayed within it.
   <br><b>id:</b> Identifier. Just a unique alphabetical string to ensign this widget.
-  <br>  <b>content:</b> - internal block of widgets
+  <br><b>width:</b> Window's width. 
+  <br><b>height:</b> Window's.  
+  <br>  <b>content:</b> - internal block for nested widgets
 </details>
 
 <details>
   <summary><b>🔹 "Tab"</b></summary>
   <br>
-  This is tab group of widgets <i>It has internal block too</i>("content").
+  This is tab group of widgets <i>It has internal block too</i>("content"). Tabs - is a sequenced blocks with dedicated specification everyone of them. id,label, and content only diffres from one to another.
   Consists of:
   <br>
   <br><b>type:</b> Tab
@@ -121,6 +127,8 @@ python main.py
   <br><b>pos_y:</b> Tab's' left-upper corner's coordinate by y-axis of your monitor, in dots
   <br><b>label:</b> Tab's name, which is displayed within it.
   <br><b>id:</b> Identifier. Just a unique alphabetical string to ensign this widget   
+  <br><b>width:</b> Tab's width - common option, which should be specified only in first block of Tab. Next one's width and height are ignored.
+  <br><b>height:</b> Tab's height. The same conditions that with 'width' of Tab.   
   <br>  <b>content:</b> - internal block of widgets
 </details>
 
@@ -309,8 +317,8 @@ python main.py
   <br><b>pos_y:</b> TableView's left-upper corner's coordinate by y-axis of your monitor, in dots
   <br><b>label:</b> TableeView's name, which is displayed within it.
   <br><b>id:</b> Identifier. Just a unique alphabetical string to ensign this widget and to control it.
-  <br><b>width:</b> width of TableView.
-  <br><b>heigt:</b> height of TableView.
+  <br><b>width:</b> width of widget TableView.
+  <br><b>height:</b> height of widget TableView.
 </details>
 
 <details>
@@ -321,10 +329,10 @@ python main.py
   Consists of:
   <br>
   <br><b>type:</b> ImageGallery
-  <br><b>pos_x:</b> ImageGallery's left-upper corner's coordinate by x-axis of your monitor, in dots
-  <br><b>pos_y:</b> ImageGallery's left-upper corner's coordinate by y-axis of your monitor, in dots
+  <br><b>pos_x:</b> ImageGallery's enter-button left-upper corner's coordinate by x-axis of your monitor, in dots
+  <br><b>pos_y:</b> ImageGallery's enter-button left-upper corner's coordinate by y-axis of your monitor, in dots
   <br><b>label:</b> ImageGallery's name, which is displayed within it.
   <br><b>id:</b> Identifier. Just a unique alphabetical string to ensign this widget and to control it.
-  <br><b>width:</b> width of ImageGallery.
-  <br><b>heigt:</b> height of ImageGallery.
+  <br><b>width:</b> width of ImageGallery .
+  <br><b>height:</b> height of ImageGallery.
 </details>
