@@ -81,6 +81,7 @@ class YamlLinter:
     def analyze_print(self,strings):
         '''Analyze report yaml'''
         error_count=0
+        string_num=1
         pattern_s=r'type|param|data|content'
         for string in strings:
             if (string.strip(' ') == '---' or string.strip(' ') == '-' or string.strip(' ') == 'content:'):
