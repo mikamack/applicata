@@ -94,5 +94,5 @@ class YamlLinter:
                 if not re.search(pattern_s, result[0]):
                     error_count += 1
                     self.log_path.write_text (self.log_path.read_text()+"Error - unidentified parameter in line "+string_num+'\n')
-            num_string +=1 
+            string_num +=1 
         return error_count
