@@ -96,7 +96,7 @@ jobs:
       run: |
         gh release create v0.9.0 release.zip \
           --title "Release v0.9.0" \
-          --notes "Release 0.9.0 early alpha"
+          --notes "Release 0.9.0 early alpha" \
           --clobber
 
 
