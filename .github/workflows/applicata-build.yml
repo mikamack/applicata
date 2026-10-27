@@ -89,7 +89,7 @@ jobs:
         cp -r templates artifacts/app-windows-latest/templates
         cp -r yaml artifacts/app-ubuntu-latest/yaml
         cp -r templates artifacts/app-ubuntu-latest/templates
-        zip -r release.zip *
+        zip -r release.zip artifacts/*
     - name: Create releases
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
